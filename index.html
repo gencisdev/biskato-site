@@ -55,12 +55,27 @@ section.g .card{background:#fff}section:not(.g) .card{background:var(--fl)}
 .svc .ic{width:72px;height:72px;margin:0 auto 12px;display:block}
 .svc b{display:block;font-size:15px;letter-spacing:-.01em}
 .svc p{font-size:13px;margin-top:4px}
+/* 6. Galerias de fotos reais */
+.phs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ph{position:relative;margin:0;border-radius:18px;overflow:hidden;background:var(--fl)}
+.ph img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .35s ease}
+.ph:hover img{transform:scale(1.04)}
+.ph figcaption{position:absolute;inset:auto 0 0 0;padding:26px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.ph.phw img{height:100%}
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.ph-grid{grid-template-columns:1fr 1fr}.ph img{height:200px}}
+@media(max-width:520px){.ph-grid{grid-template-columns:1fr 1fr}.ph img{height:160px}}
+.credit{color:var(--mu);font-size:13px;margin-top:18px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .two .card ul{margin:12px 0 0;padding-left:20px;color:var(--mu)}.two .card li{margin:6px 0}
 .plan{display:flex;flex-direction:column;gap:4px}.plan b{font-size:30px;letter-spacing:-.03em}.plan.hl{background:var(--ink)!important;color:#fff}.plan.hl p{color:#ccc}
 .tag{align-self:flex-start;background:var(--gold);color:#111;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
 details{border-bottom:1px solid var(--ln);padding:18px 0}summary{font-weight:600;cursor:pointer;font-size:17px}details p{color:var(--mu);margin:10px 0 0}
 .cta{background:var(--ink);color:#fff;text-align:center}.cta p{color:#bbb;margin:0 auto 26px;max-width:520px}
+.cta .wrap{display:grid;grid-template-columns:280px 1fr;gap:34px;align-items:center;text-align:left}
+.cta-ph{width:100%;height:300px;object-fit:cover;border-radius:20px;display:block}
+.cta .wrap>div p{margin-left:0}
+@media(max-width:820px){.cta .wrap{grid-template-columns:1fr;text-align:center}.cta-ph{height:220px;max-width:340px;margin:0 auto}}
 footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
 @media(max-width:820px){.hero .wrap,.two{grid-template-columns:1fr}.hero .acts{padding-bottom:30px}nav{display:none}header .soon{margin-left:auto;padding:10px 14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -68,7 +83,7 @@ footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;j
 <body>
 <header><div class="wrap">
 <a class="logo" href="#"><svg width="38" height="38" viewBox="0 0 48 48" role="img" aria-label="Logo Biskato"><rect width="48" height="48" rx="12" fill="#C8102E"/><path d="M16 12v24M16 12h9a6 6 0 0 1 0 12h-9M16 24h10a6 6 0 0 1 0 12H16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M37 6l4 4-4 4-4-4z" fill="#F2B705"/></svg>biskato</a>
-<nav><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#profissionais">Profissionais</a><a href="#planos">Planos</a><a href="#faq">Perguntas</a></nav>
+<nav><a href="#servicos">Serviços</a><a href="#fotos">Fotos</a><a href="#como">Como funciona</a><a href="#profissionais">Profissionais</a><a href="#planos">Planos</a><a href="#faq">Perguntas</a></nav>
 <a class="soon" href="#app"><small>Brevemente</small>Experimentar a app</a></div></header>
 
 <main>
@@ -173,7 +188,25 @@ footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;j
   <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Mecânico"><circle cx="36" cy="24" r="14" fill="#845636"/><path d="M22 20a14 14 0 0 1 28 0z" fill="#111"/><path d="M36 40v8" stroke="#845636" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#3d3d3d"/><path d="M44 52a9 9 0 1 0 8 9" fill="none" stroke="#C9D1D9" stroke-width="6" stroke-linecap="round"/><circle cx="44" cy="52" r="2.5" fill="#C9D1D9"/></svg><b>Mecânico</b><p>Viaturas e motores</p></div>
 </div></div></section>
 
-<section id="problema" class="g"><div class="wrap"><h2>Quem precisa e quem faz não se encontram</h2>
+<section id="fotos" class="g"><div class="wrap"><h2>Trabalho real, gente real</h2><p class="lead">Pedreiros, electricistas, canalizadoras, mecânicos e barbeiros — gente que resolve todos os dias e que vai encontrar no Biskato.</p>
+<div class="ph-grid">
+  <figure class="ph"><img src="fotos/obra-pedreiro.jpg" alt="Pedreiro com capacete num canteiro de obras" loading="lazy"><figcaption>Pedreiro no canteiro</figcaption></figure>
+  <figure class="ph"><img src="fotos/obra-equipa.jpg" alt="Trabalhadores a construir com blocos de cimento" loading="lazy"><figcaption>Obra de blocos</figcaption></figure>
+  <figure class="ph"><img src="fotos/engenheira.jpg" alt="Mulher engenheira com capacete amarelo" loading="lazy"><figcaption>Engenheira civil</figcaption></figure>
+  <figure class="ph"><img src="fotos/electricista.jpg" alt="Técnica a trabalhar num quadro eléctrico" loading="lazy"><figcaption>Electricista</figcaption></figure>
+  <figure class="ph"><img src="fotos/canalizadora.jpg" alt="Canalizadora com chave de canos" loading="lazy"><figcaption>Canalizadora</figcaption></figure>
+  <figure class="ph"><img src="fotos/carpinteiro.jpg" alt="Carpinteiro a trabalhar com madeira" loading="lazy"><figcaption>Carpinteiro</figcaption></figure>
+  <figure class="ph"><img src="fotos/mecanico.jpg" alt="Mecânico jovem a reparar um motor" loading="lazy"><figcaption>Mecânico</figcaption></figure>
+  <figure class="ph"><img src="fotos/moto-mecanico.jpg" alt="Mecânico a reparar mota na rua" loading="lazy"><figcaption>Mecânico de motas</figcaption></figure>
+  <figure class="ph"><img src="fotos/barbeiro.jpg" alt="Barbeiro a barbear um cliente" loading="lazy"><figcaption>Barbeiro</figcaption></figure>
+  <figure class="ph"><img src="fotos/mercado.jpg" alt="Vendedora a sorrir no mercado de rua" loading="lazy"><figcaption>Vendedora de mercado</figcaption></figure>
+  <figure class="ph"><img src="fotos/limpeza.jpg" alt="Trabalhadora de limpeza urbana a varrer" loading="lazy"><figcaption>Limpeza urbana</figcaption></figure>
+  <figure class="ph"><img src="fotos/obra-equipa2.jpg" alt="Equipa de construção com coletes reflectores" loading="lazy"><figcaption>Equipa de obra</figcaption></figure>
+</div>
+<p class="credit">Fotografias gratuitas de <a href="https://www.pexels.com" rel="noopener">Pexels</a> — illustrate Digital Ug, snazzy Photography, Kindel Media, mickael ange konan, David Iloba, dionisio castigotivane, Darkside Photography, Muhammad-Taha Ibrahim, josh_ dago__, Xavier Messina.</p>
+</div></section>
+
+<section id="problema"><div class="wrap"><h2>Quem precisa e quem faz não se encontram</h2>
 <p class="lead">Em Luanda há muito talento a trabalhar sem ser visto, e muita gente a procurar alguém de confiança sem saber a quem ligar.</p>
 <div class="cards">
 <div class="card"><h3>Difícil de encontrar</h3><p>Hoje depende do “conhecido de um conhecido” ou de grupos de WhatsApp cheios de mensagens.</p></div>
@@ -181,20 +214,20 @@ footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;j
 <div class="card"><h3>Difícil de crescer</h3><p>O profissional só trabalha quando alguém passa por acaso e não tem montra para mostrar o que sabe fazer.</p></div>
 </div></div></section>
 
-<section id="como"><div class="wrap"><h2>Como funciona</h2><p class="lead">Três passos, no telemóvel e sem complicações.</p>
+<section id="como" class="g"><div class="wrap"><h2>Como funciona</h2><p class="lead">Três passos, no telemóvel e sem complicações.</p>
 <div class="cards">
 <div class="card"><span class="n">1</span><h3>Procure</h3><p>Escolha o serviço e o bairro. Veja perfis com nota, fotos de trabalhos e selo Verificado.</p></div>
 <div class="card"><span class="n">2</span><h3>Converse</h3><p>Fale pelo chat, ligue ou peça um orçamento. Sem compromisso.</p></div>
 <div class="card"><span class="n">3</span><h3>Avalie</h3><p>Depois do serviço, deixe a sua nota. Assim todos sabem em quem confiar.</p></div>
 </div></div></section>
 
-<section id="profissionais" class="g"><div class="wrap"><h2>Para clientes e para profissionais</h2><p class="lead">Cada lado tem o que precisa.</p>
+<section id="profissionais"><div class="wrap"><h2>Para clientes e para profissionais</h2><p class="lead">Cada lado tem o que precisa.</p>
 <div class="two">
 <div class="card"><h3>Sou cliente</h3><p>Sempre grátis.</p><ul><li>Pesquisa por serviço, bairro e preço</li><li>Chat e pedido de orçamento</li><li>Avaliações reais e selo Verificado</li><li>Publique um pedido e receba propostas</li></ul></div>
 <div class="card"><h3>Sou profissional</h3><p>Pague um plano e apareça nas pesquisas.</p><ul><li>Perfil com fotos dos seus trabalhos</li><li>Clientes perto de si, sem intermediários</li><li>Painel com visitas e contactos</li><li>Pagamento por referência ou Multicaixa Express</li></ul></div>
 </div></div></section>
 
-<section id="planos"><div class="wrap"><h2>Planos para profissionais</h2><p class="lead">Escolha o período que lhe convém. Valores de exemplo, a definir antes do lançamento.</p>
+<section id="planos" class="g"><div class="wrap"><h2>Planos para profissionais</h2><p class="lead">Escolha o período que lhe convém. Valores de exemplo, a definir antes do lançamento.</p>
 <div class="cards">
 <div class="card plan"><p>Para experimentar</p><h3>3 dias</h3><b>500 Kz</b></div>
 <div class="card plan"><p>Uma semana de trabalho</p><h3>1 semana</h3><b>1.000 Kz</b></div>
@@ -202,7 +235,7 @@ footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;j
 <div class="card plan"><p>Poupa 6.000 Kz</p><h3>1 ano</h3><b>30.000 Kz</b></div>
 </div></div></section>
 
-<section id="faq" class="g"><div class="wrap"><h2>Perguntas frequentes</h2><p class="lead">As dúvidas mais comuns.</p>
+<section id="faq"><div class="wrap"><h2>Perguntas frequentes</h2><p class="lead">As dúvidas mais comuns.</p>
 <details><summary>É grátis para clientes?</summary><p>Sim. Só os profissionais pagam um plano para aparecer nas pesquisas.</p></details>
 <details><summary>O que significa o selo Verificado?</summary><p>A nossa equipa confirma o BI e o telefone do profissional antes de dar o selo.</p></details>
 <details><summary>Como se paga ao profissional?</summary><p>Combinam entre si, em dinheiro ou transferência. O pagamento protegido está previsto para uma fase futura.</p></details>
@@ -211,8 +244,11 @@ footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;j
 <details><summary>Quando a app fica disponível?</summary><p>Estamos a preparar o lançamento. Siga-nos ou escreva-nos para saber em primeira mão.</p></details>
 </div></section>
 
-<section id="app" class="cta"><div class="wrap"><h2>A app chega em breve</h2><p>Estamos a terminar os últimos detalhes. Em breve estará disponível para Android — deixe-nos o seu contacto para saber em primeira mão.</p>
-<a class="btn gold" href="mailto:orgbiskato@gmail.com?subject=Quero%20saber%20do%20lan%C3%A7amento%20do%20Biskato">Quero ser avisado</a></div></section>
+<section id="app" class="cta"><div class="wrap">
+<img class="cta-ph" src="fotos/cliente-telemovel.jpg" alt="Cliente a usar o telemóvel para encontrar serviços" loading="lazy">
+<div><h2>A app chega em breve</h2><p>Estamos a terminar os últimos detalhes. Em breve estará disponível para Android — deixe-nos o seu contacto para saber em primeira mão.</p>
+<a class="btn gold" href="mailto:orgbiskato@gmail.com?subject=Quero%20saber%20do%20lan%C3%A7amento%20do%20Biskato">Quero ser avisado</a></div>
+</div></section>
 </main>
 <footer><div class="wrap">
 <span>© 2026 Biskato · Luanda, Angola · TheBoyz Dev Org</span>
