@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<title>Biskato — Encontre quem resolve</title>
+<meta name="description" content="O Biskato junta quem precisa de um serviço com quem o faz, no seu bairro. Pedreiros, electricistas, canalizadores, costureiras e muito mais em Luanda. Grátis para clientes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#C8102E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Biskato — Encontre quem resolve">
+<meta property="og:description" content="Junta quem precisa de um serviço com quem o faz, no seu bairro. Luanda, Angola. Grátis para clientes.">
+<meta property="og:locale" content="pt_AO">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+/* 1. Cores e medidas: mude aqui para mudar o site todo */
+:root{--red:#C8102E;--ink:#111;--gold:#F2B705;--fl:#F5F5F5;--mu:#5E5E5E;--ln:#E8E8E8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+/* 2. Cabeçalho */
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;gap:24px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:24px;letter-spacing:-.045em}
+nav{margin-left:auto;display:flex;gap:22px;font-weight:500;font-size:15px}nav a{text-decoration:none;color:var(--mu)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:14px 24px;border-radius:14px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+.btn.w{background:#fff;color:var(--ink)}.btn.o{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.soon{display:inline-block;padding:14px 24px;border-radius:14px;background:#fff;color:var(--mu);font-weight:700;border:2px dashed var(--ln);font-size:16px}
+.soon small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+/* 3. Início (hero) com padrão africano */
+.hero{background-color:var(--red);color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.15' stroke-width='2'%3E%3Cpath d='M24 3l21 21-21 21L3 24z'/%3E%3Cpath d='M24 15l9 9-9 9-9-9z'/%3E%3C/g%3E%3C/svg%3E");background-size:48px 48px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:end;padding-top:64px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;letter-spacing:-.04em;margin:0 0 18px;font-weight:800}
+.hero p{font-size:19px;max-width:520px;margin:0 0 28px;opacity:.95}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:7px 14px;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:18px}
+.pill svg{flex:none}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:64px}
+.hero .art svg{width:100%;height:auto;display:block}
+.band{height:14px;background:linear-gradient(90deg,#111 50%,var(--gold) 50%)}
+/* 4. Secções */
+section{padding:76px 0}section.g{background:var(--fl)}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.035em;line-height:1.1;margin:0 0 12px;font-weight:800}
+.lead{color:var(--mu);font-size:18px;max-width:640px;margin:0 0 36px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:#fff;border-radius:20px;padding:26px}
+section.g .card{background:#fff}section:not(.g) .card{background:var(--fl)}
+.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em}.card p{margin:0;color:var(--mu)}
+.n{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;margin-bottom:14px}
+/* 5. Serviços ilustrados */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.svc .card{padding:20px 14px;text-align:center;border-radius:18px}
+.svc .ic{width:72px;height:72px;margin:0 auto 12px;display:block}
+.svc b{display:block;font-size:15px;letter-spacing:-.01em}
+.svc p{font-size:13px;margin-top:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two .card ul{margin:12px 0 0;padding-left:20px;color:var(--mu)}.two .card li{margin:6px 0}
+.plan{display:flex;flex-direction:column;gap:4px}.plan b{font-size:30px;letter-spacing:-.03em}.plan.hl{background:var(--ink)!important;color:#fff}.plan.hl p{color:#ccc}
+.tag{align-self:flex-start;background:var(--gold);color:#111;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
+details{border-bottom:1px solid var(--ln);padding:18px 0}summary{font-weight:600;cursor:pointer;font-size:17px}details p{color:var(--mu);margin:10px 0 0}
+.cta{background:var(--ink);color:#fff;text-align:center}.cta p{color:#bbb;margin:0 auto 26px;max-width:520px}
+footer{padding:28px 0;font-size:14px;color:var(--mu)}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+@media(max-width:820px){.hero .wrap,.two{grid-template-columns:1fr}.hero .acts{padding-bottom:30px}nav{display:none}header .soon{margin-left:auto;padding:10px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#"><svg width="38" height="38" viewBox="0 0 48 48" role="img" aria-label="Logo Biskato"><rect width="48" height="48" rx="12" fill="#C8102E"/><path d="M16 12v24M16 12h9a6 6 0 0 1 0 12h-9M16 24h10a6 6 0 0 1 0 12H16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M37 6l4 4-4 4-4-4z" fill="#F2B705"/></svg>biskato</a>
+<nav><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#profissionais">Profissionais</a><a href="#planos">Planos</a><a href="#faq">Perguntas</a></nav>
+<a class="soon" href="#app"><small>Brevemente</small>Experimentar a app</a></div></header>
+
+<main>
+<div class="hero"><div class="wrap"><div>
+<span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#F2B705"/><path d="M7 12.5l3.2 3L17 9" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Luanda · Angola · Em breve nas lojas</span>
+<h1>Encontre quem resolve. Ou seja quem resolve.</h1>
+<p>O Biskato junta quem precisa de um serviço com quem o faz, no seu bairro. Grátis para clientes. Simples para profissionais.</p>
+<div class="acts"><a class="btn gold" href="#como">Ver como funciona</a><a class="btn o" href="#profissionais">Sou profissional</a></div></div>
+<div class="art">
+<svg viewBox="0 0 520 340" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Profissionais angolanos a trabalhar: pedreiro, electricista e pintora">
+  <defs>
+    <clipPath id="hc"><rect x="0" y="0" width="520" height="340" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#hc)">
+    <!-- sol -->
+    <circle cx="440" cy="70" r="46" fill="#F2B705"/>
+    <circle cx="440" cy="70" r="58" fill="none" stroke="#F2B705" stroke-opacity=".4" stroke-width="8"/>
+    <!-- parede de tijolos -->
+    <g fill="#fff" fill-opacity=".14">
+      <rect x="30" y="196" width="46" height="20" rx="3"/><rect x="80" y="196" width="46" height="20" rx="3"/><rect x="130" y="196" width="46" height="20" rx="3"/>
+      <rect x="55" y="218" width="46" height="20" rx="3"/><rect x="105" y="218" width="46" height="20" rx="3"/><rect x="155" y="218" width="46" height="20" rx="3"/>
+      <rect x="30" y="240" width="46" height="20" rx="3"/><rect x="80" y="240" width="46" height="20" rx="3"/><rect x="130" y="240" width="46" height="20" rx="3"/>
+    </g>
+    <!-- chão -->
+    <rect x="0" y="296" width="520" height="44" fill="#111" fill-opacity=".22"/>
+    <!-- ============ pedreiro (esquerda) ============ -->
+    <g>
+      <circle cx="120" cy="150" r="26" fill="#6B4226"/>
+      <path d="M96 142a26 26 0 0 1 48 0z" fill="#F2B705"/>
+      <rect x="92" y="138" width="56" height="8" rx="4" fill="#E09F00"/>
+      <circle cx="112" cy="154" r="2.6" fill="#1a1a1a"/><circle cx="128" cy="154" r="2.6" fill="#1a1a1a"/>
+      <path d="M116 164q5 4 10 0" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <!-- corpo agachado -->
+      <path d="M92 296v-52a28 28 0 0 1 28-28h20a28 28 0 0 1 26 17l16 30" fill="#2F5D8A"/>
+      <rect x="108" y="196" width="20" height="26" rx="9" fill="#6B4226"/>
+      <!-- braço com colher -->
+      <path d="M118 232l34 22" stroke="#6B4226" stroke-width="10" stroke-linecap="round"/>
+      <path d="M148 250l22 10-8 12-16-6z" fill="#C9D1D9"/>
+      <rect x="162" y="256" width="22" height="7" rx="3.5" fill="#5b3a1e" transform="rotate(24 173 260)"/>
+      <!-- tijolo -->
+      <rect x="60" y="286" width="40" height="18" rx="3" fill="#B3543F"/>
+      <rect x="58" y="290" width="40" height="18" rx="3" fill="#C16048"/>
+      <!-- pernas -->
+      <path d="M96 296l-6 0M140 282l14 14" stroke="#33415C" stroke-width="14" stroke-linecap="round"/>
+    </g>
+    <!-- ============ electricista (centro) ============ -->
+    <g>
+      <circle cx="270" cy="118" r="30" fill="#845636"/>
+      <path d="M242 108a30 30 0 0 1 56 0z" fill="#F2B705"/>
+      <rect x="238" y="104" width="64" height="9" rx="4.5" fill="#E09F00"/>
+      <circle cx="261" cy="122" r="3" fill="#1a1a1a"/><circle cx="279" cy="122" r="3" fill="#1a1a1a"/>
+      <path d="M264 132q6 5 12 0" stroke="#1a1a1a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <!-- corpo -->
+      <path d="M238 296v-84a32 32 0 0 1 32-32h0a32 32 0 0 1 32 32v84z" fill="#C8102E"/>
+      <rect x="256" y="152" width="28" height="30" rx="12" fill="#845636"/>
+      <!-- braço esquerdo com candeeiro/lâmpada -->
+      <path d="M244 206l-26 24" stroke="#845636" stroke-width="11" stroke-linecap="round"/>
+      <circle cx="212" cy="236" r="13" fill="#F2B705"/>
+      <path d="M205 247h14l-3 8h-8z" fill="#E09F00"/>
+      <path d="M212 224v-6M200 229l-4-4M224 229l4-4" stroke="#F2B705" stroke-width="3" stroke-linecap="round"/>
+      <!-- braço direito com alicate -->
+      <path d="M296 206l24 22" stroke="#845636" stroke-width="11" stroke-linecap="round"/>
+      <path d="M318 228l14-14M322 240l14-6" stroke="#C9D1D9" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="320" cy="234" r="5" fill="#E09F00"/>
+      <!-- pernas -->
+      <path d="M254 296l-2 0M286 296l2 0" stroke="#7A1F30" stroke-width="16" stroke-linecap="round"/>
+    </g>
+    <!-- ============ pintora (direita) ============ -->
+    <g>
+      <circle cx="404" cy="146" r="26" fill="#6B4226"/>
+      <path d="M378 138c-2-18 10-26 26-26s28 8 26 26c-9-6-17-8-26-8s-17 2-26 8z" fill="#F2B705"/>
+      <circle cx="404" cy="106" r="9" fill="#F2B705"/>
+      <circle cx="396" cy="150" r="2.6" fill="#1a1a1a"/><circle cx="412" cy="150" r="2.6" fill="#1a1a1a"/>
+      <path d="M400 160q5 4 9 0" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <!-- corpo -->
+      <path d="M376 296v-76a28 28 0 0 1 28-28h0a28 28 0 0 1 28 28v76z" fill="#0E7C4A"/>
+      <rect x="390" y="170" width="26" height="26" rx="11" fill="#6B4226"/>
+      <!-- braço com rolo -->
+      <path d="M380 226l-20 20" stroke="#6B4226" stroke-width="10" stroke-linecap="round"/>
+      <rect x="344" y="238" width="30" height="10" rx="5" fill="#C9D1D9" transform="rotate(-40 359 243)"/>
+      <rect x="336" y="224" width="18" height="34" rx="4" fill="#0E7C4A" transform="rotate(-40 345 241)"/>
+      <!-- balde -->
+      <path d="M446 288l6-34h20l6 34z" fill="#C8102E"/>
+      <path d="M449 262q10-10 20 0" stroke="#fff" stroke-width="3" fill="none"/>
+      <!-- pernas -->
+      <path d="M392 296l-2 0M414 296l2 0" stroke="#085C37" stroke-width="15" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
+</div></div></div>
+<div class="band"></div>
+
+<section id="servicos"><div class="wrap"><h2>Serviços que vai encontrar</h2><p class="lead">Do arranjo do dia-a-dia à obra grande. Tudo com profissionais perto de si.</p>
+<div class="svc">
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Pedreiro"><circle cx="36" cy="24" r="14" fill="#6B4226"/><path d="M22 20a14 14 0 0 1 28 0z" fill="#F2B705"/><path d="M36 40v8" stroke="#6B4226" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#2F5D8A"/><rect x="46" y="52" width="16" height="6" rx="3" fill="#C9D1D9" transform="rotate(20 54 55)"/><rect x="14" y="58" width="14" height="8" rx="2" fill="#B3543F"/></svg><b>Pedreiro</b><p>Construção e reparação</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Electricista"><circle cx="36" cy="24" r="14" fill="#845636"/><path d="M22 20a14 14 0 0 1 28 0z" fill="#F2B705"/><path d="M36 40v8" stroke="#845636" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#C8102E"/><path d="M38 46l-6 10h6l-4 10 10-13h-6l4-7z" fill="#F2B705"/></svg><b>Electricista</b><p>Instalações e reparações</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Canalizador"><circle cx="36" cy="24" r="14" fill="#6B4226"/><path d="M24 18c0-8 24-8 24 0" fill="none" stroke="#F2B705" stroke-width="7"/><path d="M36 40v8" stroke="#6B4226" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#0E7C4A"/><path d="M44 50a8 8 0 1 0 6 12" fill="none" stroke="#C9D1D9" stroke-width="6" stroke-linecap="round"/></svg><b>Canalizador</b><p>Água e esgotos</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Costureira"><circle cx="36" cy="26" r="13" fill="#845636"/><path d="M23 22c-2-12 28-12 26 0-5-4-9-5-13-5s-8 1-13 5z" fill="#F2B705"/><path d="M36 42v6" stroke="#845636" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#7A2A3C"/><path d="M44 48l12 14M44 62l12-14" stroke="#C9D1D9" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="55" r="3" fill="#F2B705"/></svg><b>Costureira</b><p>Roupas e reparações</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Pintor"><circle cx="36" cy="24" r="14" fill="#6B4226"/><path d="M22 20a14 14 0 0 1 28 0z" fill="#fff" stroke="#E8E8E8"/><path d="M36 40v8" stroke="#6B4226" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#C8102E"/><rect x="42" y="48" width="18" height="7" rx="3.5" fill="#C9D1D9" transform="rotate(45 51 51)"/><rect x="46" y="52" width="7" height="14" rx="3" fill="#F2B705" transform="rotate(45 49 59)"/></svg><b>Pintor</b><p>Pintura e acabamentos</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Carpinteiro"><circle cx="36" cy="24" r="14" fill="#845636"/><path d="M23 21c1-9 25-9 26 0-5-4-9-5-13-5s-8 1-13 5z" fill="#F2B705"/><path d="M36 40v8" stroke="#845636" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#5b3a1e"/><path d="M42 54l16 6-2 6-16-4z" fill="#C9D1D9"/><circle cx="52" cy="60" r="2" fill="#111"/></svg><b>Carpinteiro</b><p>Mobiliário e estruturas</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Limpeza"><circle cx="36" cy="24" r="14" fill="#6B4226"/><path d="M23 22c-2-11 27-11 26 0-5-4-9-5-13-5s-8 1-13 5z" fill="#0E7C4A"/><path d="M36 40v8" stroke="#6B4226" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#2F5D8A"/><path d="M44 46l10 20h-8l-8-18z" fill="#F2B705"/><path d="M52 50l6 14" stroke="#E09F00" stroke-width="3"/></svg><b>Limpeza</b><p>Casas e escritórios</p></div>
+  <div class="card"><svg class="ic" viewBox="0 0 72 72" role="img" aria-label="Mecânico"><circle cx="36" cy="24" r="14" fill="#845636"/><path d="M22 20a14 14 0 0 1 28 0z" fill="#111"/><path d="M36 40v8" stroke="#845636" stroke-width="8" stroke-linecap="round"/><rect x="26" y="46" width="20" height="18" rx="8" fill="#3d3d3d"/><path d="M44 52a9 9 0 1 0 8 9" fill="none" stroke="#C9D1D9" stroke-width="6" stroke-linecap="round"/><circle cx="44" cy="52" r="2.5" fill="#C9D1D9"/></svg><b>Mecânico</b><p>Viaturas e motores</p></div>
+</div></div></section>
+
+<section id="problema" class="g"><div class="wrap"><h2>Quem precisa e quem faz não se encontram</h2>
+<p class="lead">Em Luanda há muito talento a trabalhar sem ser visto, e muita gente a procurar alguém de confiança sem saber a quem ligar.</p>
+<div class="cards">
+<div class="card"><h3>Difícil de encontrar</h3><p>Hoje depende do “conhecido de um conhecido” ou de grupos de WhatsApp cheios de mensagens.</p></div>
+<div class="card"><h3>Difícil de confiar</h3><p>Sem avaliações nem verificação, cada contratação é um risco para o cliente.</p></div>
+<div class="card"><h3>Difícil de crescer</h3><p>O profissional só trabalha quando alguém passa por acaso e não tem montra para mostrar o que sabe fazer.</p></div>
+</div></div></section>
+
+<section id="como"><div class="wrap"><h2>Como funciona</h2><p class="lead">Três passos, no telemóvel e sem complicações.</p>
+<div class="cards">
+<div class="card"><span class="n">1</span><h3>Procure</h3><p>Escolha o serviço e o bairro. Veja perfis com nota, fotos de trabalhos e selo Verificado.</p></div>
+<div class="card"><span class="n">2</span><h3>Converse</h3><p>Fale pelo chat, ligue ou peça um orçamento. Sem compromisso.</p></div>
+<div class="card"><span class="n">3</span><h3>Avalie</h3><p>Depois do serviço, deixe a sua nota. Assim todos sabem em quem confiar.</p></div>
+</div></div></section>
+
+<section id="profissionais" class="g"><div class="wrap"><h2>Para clientes e para profissionais</h2><p class="lead">Cada lado tem o que precisa.</p>
+<div class="two">
+<div class="card"><h3>Sou cliente</h3><p>Sempre grátis.</p><ul><li>Pesquisa por serviço, bairro e preço</li><li>Chat e pedido de orçamento</li><li>Avaliações reais e selo Verificado</li><li>Publique um pedido e receba propostas</li></ul></div>
+<div class="card"><h3>Sou profissional</h3><p>Pague um plano e apareça nas pesquisas.</p><ul><li>Perfil com fotos dos seus trabalhos</li><li>Clientes perto de si, sem intermediários</li><li>Painel com visitas e contactos</li><li>Pagamento por referência ou Multicaixa Express</li></ul></div>
+</div></div></section>
+
+<section id="planos"><div class="wrap"><h2>Planos para profissionais</h2><p class="lead">Escolha o período que lhe convém. Valores de exemplo, a definir antes do lançamento.</p>
+<div class="cards">
+<div class="card plan"><p>Para experimentar</p><h3>3 dias</h3><b>500 Kz</b></div>
+<div class="card plan"><p>Uma semana de trabalho</p><h3>1 semana</h3><b>1.000 Kz</b></div>
+<div class="card plan hl"><span class="tag">Mais escolhido</span><h3>1 mês</h3><b>3.000 Kz</b><p>Perfil visível durante 30 dias</p></div>
+<div class="card plan"><p>Poupa 6.000 Kz</p><h3>1 ano</h3><b>30.000 Kz</b></div>
+</div></div></section>
+
+<section id="faq" class="g"><div class="wrap"><h2>Perguntas frequentes</h2><p class="lead">As dúvidas mais comuns.</p>
+<details><summary>É grátis para clientes?</summary><p>Sim. Só os profissionais pagam um plano para aparecer nas pesquisas.</p></details>
+<details><summary>O que significa o selo Verificado?</summary><p>A nossa equipa confirma o BI e o telefone do profissional antes de dar o selo.</p></details>
+<details><summary>Como se paga ao profissional?</summary><p>Combinam entre si, em dinheiro ou transferência. O pagamento protegido está previsto para uma fase futura.</p></details>
+<details><summary>Como paga o profissional o plano?</summary><p>Por referência (ATM, internet banking ou Multicaixa Express). O plano activa quando o pagamento é confirmado.</p></details>
+<details><summary>Em que zonas funciona?</summary><p>Começamos em Luanda (Maianga, Talatona, Viana, Cazenga, Kilamba, Rangel, Icolo e Bengo e Zango) e vamos crescer para outras províncias.</p></details>
+<details><summary>Quando a app fica disponível?</summary><p>Estamos a preparar o lançamento. Siga-nos ou escreva-nos para saber em primeira mão.</p></details>
+</div></section>
+
+<section id="app" class="cta"><div class="wrap"><h2>A app chega em breve</h2><p>Estamos a terminar os últimos detalhes. Em breve estará disponível para Android — deixe-nos o seu contacto para saber em primeira mão.</p>
+<a class="btn gold" href="mailto:orgbiskato@gmail.com?subject=Quero%20saber%20do%20lan%C3%A7amento%20do%20Biskato">Quero ser avisado</a></div></section>
+</main>
+<footer><div class="wrap">
+<span>© 2026 Biskato · Luanda, Angola · TheBoyz Dev Org</span>
+<span>Contacto: <a href="mailto:orgbiskato@gmail.com">orgbiskato@gmail.com</a></span>
+</div></footer>
+</body></html>

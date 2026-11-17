@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Biskato">
+  <rect width="512" height="512" rx="112" fill="#C8102E"/>
+  <path
+    d="M160 120v272M160 120h100a68 68 0 0 1 0 136H160M160 256h112a68 68 0 0 1 0 136H160"
+    fill="none"
+    stroke="#FFFDF9"
+    stroke-width="54"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path d="M400 56l34 34-34 34-34-34z" fill="#F2B705"/>
+</svg>
