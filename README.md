@@ -9,9 +9,9 @@
 [![Site](https://img.shields.io/badge/site-no%20ar-C8102E?style=flat-square&logo=vercel&logoColor=fff)](https://biskatoao.vercel.app)
 [![HTML](https://img.shields.io/badge/HTML%20%C3%BAnico-sem%20build-E34F26?style=flat-square&logo=html5&logoColor=fff)](index.html)
 [![Analytics](https://img.shields.io/badge/Vercel%20Web%20Analytics-activo-111?style=flat-square&logo=vercel&logoColor=fff)](https://vercel.com/analytics)
-[![Licença](https://img.shields.io/badge/licen%C3%A7a-propriet%C3%A1ria-111?style=flat-square)](https://github.com/gencisdev/Biskatoao-App/blob/main/LICENSE)
+[![Licença](https://img.shields.io/badge/licen%C3%A7a-propriet%C3%A1ria-111?style=flat-square)](../Biskatoao-App/blob/main/LICENSE)
 
-[🌐 biskatoao.vercel.app](https://biskatoao.vercel.app) · [📱 App + APK](https://github.com/gencisdev/Biskatoao-App/releases/latest) · [💻 Código da app](https://github.com/gencisdev/Biskatoao-App)
+[🌐 biskatoao.vercel.app](https://biskatoao.vercel.app) · [💻 Código da app](https://github.com/gencisdev/Biskatoao-App)
 
 </div>
 
